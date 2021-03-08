@@ -1,0 +1,50 @@
+.note {
+    width: 10em;
+    background: #fff6a1;
+    border-radius: 22px;
+
+    padding: 0.1em 2em 7em 2em;
+}
+
+.note h2 {
+    font-size: 30px;
+}
+
+.note ul {
+    margin: -1em; /* To remove default bottom margin */
+    padding: 0; /* To remove default left padding */
+}
+
+.list-container {
+    margin-left: -8em;
+}
+
+.zoom-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.zoom-icon-note {
+    background: #000;
+    width: 3.5em;
+    height: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    float: right;
+    position: absolute;
+    bottom: -12vh;
+    right: 0;
+    z-index: 0;
+}
+
+@media (max-width: 600px) {
+    .note ul {
+        margin: 1em; /* To remove default bottom margin */
+        padding: 0; /* To remove default left padding */
+    }
+    .zoom-icon-note {
+        bottom: -10vh;
+    }
+}

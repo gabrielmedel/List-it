@@ -2,11 +2,10 @@
 
 This is like the starter of the project where routes are not implemented but the layout is already made
 
-## Available Scripts
+## Get started
+To get started you have to install the dependencies first
 
-In the project directory, you can run:
-
-### `yarn start`
+`npm install`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

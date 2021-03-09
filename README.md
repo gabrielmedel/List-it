@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Mid-Front-End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is like the starter of the project where routes are not implemented but the layout is already made
 
 ## Available Scripts
 

@@ -43,4 +43,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 `npm run test` 
 
-Run all tests of the `App.test.tsx` file
+Run all tests of the `App.test.tsx` file.

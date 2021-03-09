@@ -2,23 +2,36 @@
     display: flex;
 }
 
-.notes-container {
+.app-container {
     width: 100%;
-    padding: 2% 7em;
+    padding: 0% 1em 6em 7em;
+    display: flex;
+}
+
+.container-icons .icon {
+    fill: black;
+}
+
+.notes-container {
     display: flex;
     flex-flow: wrap;
     align-items: center;
     justify-content: flex-start;
 }
-
 .notes-container div {
-    margin-left: 2em;
+    margin-left: 1.5em;
     margin-top: 2em;
 }
 
 @media (max-width: 600px) {
-    .notes-container {
+    .app-container {
+        width: 100%;
         padding: 0% 0em 10em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .notes-container {
         align-items: center;
         flex-direction: column;
     }

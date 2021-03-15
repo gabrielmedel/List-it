@@ -10,6 +10,11 @@ import { User } from "./assets/icons/User"
 import SingleNote from "./Components/SingleNote/SingleNote"
 
 function App() {
+  if (navigator.onLine) {
+    alert("online")
+  } else {
+    alert("offline")
+  }
   return (
     <div className="App">
       <div className="container">
@@ -40,11 +45,9 @@ function App() {
               <React.Fragment>
                 <div className="app-container">
                   <Route path="/" exact>
-                    <div className="notes-container">
-                      <Link to="/note">
-                        <Note />
-                      </Link>
-                    </div>
+                    <Link className="notes-container" to="/note">
+                      <Note />
+                    </Link>
                   </Route>
                   <Route path="/add">
                     <AddNote></AddNote>

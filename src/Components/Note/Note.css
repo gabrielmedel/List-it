@@ -1,18 +1,25 @@
 .note {
-    width: 10em;
-    background: #fff6a1;
-    border-radius: 22px;
-
-    padding: 0.1em 2em 7em 2em;
+    width: 13em;
+    background: #fffac9;
+    border-radius: 15px;
+    padding: 0.1em 2em 6em 2em;
+    cursor: pointer;
 }
 
 .note h2 {
     font-size: 30px;
+    line-height: 1em;
+    font-weight: 700;
+    margin-right: 2em;
 }
 
 .note ul {
-    margin: -1em; /* To remove default bottom margin */
+    margin: -2em; /* To remove default bottom margin */
+    margin-top: 0.1em;
     padding: 0; /* To remove default left padding */
+    list-style: none;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .list-container {
@@ -25,26 +32,30 @@
 }
 
 .zoom-icon-note {
-    background: #000;
-    width: 3.5em;
-    height: 3.5em;
+    border: 2.5px solid black;
+    width: 2.3em;
+    height: 2.3em;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 7px;
     float: right;
     position: absolute;
-    bottom: -12vh;
-    right: 0;
-    z-index: 0;
+    bottom: -4.8em;
+    right: -0.8em;
+}
+
+.zoom-icon-note img {
+    width: 40%;
 }
 
 @media (max-width: 600px) {
     .note ul {
-        margin: 1em; /* To remove default bottom margin */
+        margin: 0em; /* To remove default bottom margin */
         padding: 0; /* To remove default left padding */
     }
+
     .zoom-icon-note {
-        bottom: -10vh;
+        bottom: -4.6em;
     }
 }

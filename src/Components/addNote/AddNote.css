@@ -1,0 +1,76 @@
+.addNoteContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 6%;
+}
+
+.addNote {
+  background: #fffac9;
+  width: 75%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
+}
+
+.noteTile {
+  font-size: 3em;
+  font-weight: bold;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid rgb(255, 212, 21);
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.noteItem {
+  font-size: 1em;
+  font-weight: bold;
+  display: block;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid rgb(255, 212, 21);
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.submitButton {
+  align-self: flex-start;
+  cursor: pointer;
+  margin-top: 5%;
+  background: rgb(245, 203, 15);
+  outline: none;
+  border: none;
+  padding: 1em;
+  min-width: 20%;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  border-radius: 0.3em;
+}
+
+.addNote input::placeholder {
+  color: rgb(255, 186, 74);
+}
+
+@media (max-width: 600px) {
+  .addNote {
+    background: #fffac9;
+    width: 65%;
+    min-height: 50vh;
+  }
+
+  .addNoteContainer {
+    align-items: center;
+    padding-left: 0%;
+  }
+
+  .noteTile {
+    font-size: 2em;
+  }
+}

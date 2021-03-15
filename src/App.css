@@ -3,13 +3,13 @@
 }
 
 .fullApp {
-  width: 100%;
+  width: 90%;
 }
 
 .app-container {
   width: 100%;
   height: 100%;
-  padding: 0% 1em 2em 7em;
+  padding: 0% 1em 7em 7em;
 }
 
 .container-icons .icon {
@@ -17,14 +17,14 @@
 }
 
 .notes-container {
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-flow: wrap;
   align-items: flex-end;
   justify-content: flex-start;
   margin-top: 2.3em;
   margin-left: 1.5em;
-  padding: 2em 0 0em 0;
+  padding: 2em 0 2em 0;
 }
 .notes-container div {
   margin-left: 1.5em;

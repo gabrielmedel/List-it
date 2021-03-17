@@ -2,7 +2,7 @@ import React from "react"
 import "./App.css"
 import Note from "./Components/Note/Note"
 import "./Components/Nav/Nav.css"
-import { BrowserRouter as Router, Switch, Route, NavLink, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom"
 import AddNote from "./Components/addNote/AddNote"
 import { Home } from "./assets/icons/Home"
 import { Plus } from "./assets/icons/Plus"
@@ -11,9 +11,9 @@ import SingleNote from "./Components/SingleNote/SingleNote"
 
 function App() {
   if (navigator.onLine) {
-    alert("online")
+    console.log("online")
   } else {
-    alert("offline")
+    console.log("offline")
   }
   return (
     <div className="App">
@@ -45,9 +45,9 @@ function App() {
               <React.Fragment>
                 <div className="app-container">
                   <Route path="/" exact>
-                    <Link className="notes-container" to="/note">
+                    <div className="notes-container">
                       <Note />
-                    </Link>
+                    </div>
                   </Route>
                   <Route path="/add">
                     <AddNote></AddNote>

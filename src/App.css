@@ -31,6 +31,10 @@
 }
 
 @media (max-width: 600px) {
+  .fullApp {
+    width: 100%;
+  }
+
   .app-container {
     width: 100%;
     display: flex;

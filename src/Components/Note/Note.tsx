@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import ThreeDots from "../ThreeDots/ThreeDots"
 
 function NotesList(props: any) {
-  const [notes, setNotes] = useState(props.notes)
+  const [notes] = useState(props.notes)
 
   function handleRemove(arr, value) {
     return arr.filter(function ({ id }) {

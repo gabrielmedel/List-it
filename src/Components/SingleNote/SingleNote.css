@@ -10,11 +10,17 @@
   margin-left: 5vw;
   width: 75vw;
   padding-bottom: 15em;
+  padding-left: 2em;
+}
+
+.singleNote .note h2 {
+  font-size: 2.8em;
 }
 
 .singleNote ul {
   margin-left: 7.5em;
   font-size: 1.1em;
+  overflow: visible;
 }
 
 @media (max-width: 600px) {

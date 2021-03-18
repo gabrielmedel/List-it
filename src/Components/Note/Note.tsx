@@ -5,48 +5,36 @@ import { Link } from "react-router-dom"
 import ThreeDots from "../ThreeDots/ThreeDots"
 
 function NotesList(props: any) {
-  const [notes] = useState(props.notes)
+  const [notes, setNotes] = useState(props.notes)
 
-  function handleRemove(arr, value) {
-    return arr.filter(function ({ id }) {
-      return id !== value
-    })
-  }
-  function removeNote(arr) {
-    console.log(arr)
-    /*let stringified = JSON.stringify(arr)
-    localStorage.setItem("note", stringified)
-    setNotes([...arr])*/
+  const handler = value => {
+    setNotes([...value])
   }
 
   let notesListed = notes
     .map(({ id, title, items }) => (
-      <div
-        onClick={() => removeNote(handleRemove(notes, id))}
-        key={id}
-        className="note"
-        title={"zoom the " + title + " list"}>
+      <div key={id} className="note" title={"zoom the " + title + " list"}>
         <div className="ThreeDots">
-          <ThreeDots></ThreeDots>
+          <ThreeDots ID={id} notes={notes} handler={handler}></ThreeDots>
         </div>
-        <Link to={"note/" + id}>
-          <h2 key={id}>{title}</h2>
+        <Link className="note-container" to={"note/" + id}>
+          <div className="note-container">
+            <h2 key={id}>{title}</h2>
 
-          <div className="list-container">
-            {console.log()}
-            <ul>
-              {items.map(item => {
-                return <li>- {item}</li>
-              })}
-            </ul>
-          </div>
-
-          <div className="zoom-icon">
-            <div key={id} className="zoom-icon-note" title={"pin the " + title + " list"}>
-              <img src={pin} alt="zoom list" />
+            <div className="list-container">
+              <ul>
+                {items.map(item => {
+                  return <li>- {item}</li>
+                })}
+              </ul>
             </div>
           </div>
         </Link>
+        <div className="zoom-icon">
+          <div key={id} className="zoom-icon-note" title={"pin the " + title + " list"}>
+            <img src={pin} alt="zoom list" />
+          </div>
+        </div>
       </div>
     ))
     .reverse()
@@ -62,7 +50,7 @@ export default class Note extends Component<any, any> {
   }
 
   handleChange(e: any) {
-    this.setState({ notes: [...this.state.notes, this.state.notes] })
+    this.setState({ notes: [...this.state.notes] })
   }
 
   render() {

@@ -18,8 +18,6 @@ function InputGenerator(props: any) {
   return listItems
 }
 
-let notes = JSON.parse(localStorage.getItem("note")) || []
-
 let ID = () => {
   let array = new Uint32Array(8)
   window.crypto.getRandomValues(array)
@@ -56,7 +54,8 @@ export default class AddNote extends Component<any, any> {
 
   submitHandler(e: any) {
     e.preventDefault()
-    this.setState({ value: [...this.state.value, e.target.value] })
+    let notes = JSON.parse(localStorage.getItem("note")) || []
+
     const note = {
       id: ID(),
       title: this.state.title,

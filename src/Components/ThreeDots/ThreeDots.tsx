@@ -44,6 +44,8 @@ export default function LongMenu() {
             maxHeight: ITEM_HEIGHT * 4.5,
             width: "20ch",
             position: "absolute",
+            boxShadow: "0px 0px 42px rgba(0, 0, 0, 0.09)",
+            backgroundColor: "#FFFCE6",
           },
         }}>
         {options.map(option => (

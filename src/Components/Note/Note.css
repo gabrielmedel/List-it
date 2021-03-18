@@ -32,16 +32,15 @@
 }
 
 .zoom-icon {
-  top: 0;
+  bottom: 0;
   right: 0;
   position: absolute;
-  cursor: pointer;
   width: 100%;
-  height: 100%;
+  height: 30vh;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  z-index: 2;
+  z-index: 0;
 }
 
 a {
@@ -50,6 +49,7 @@ a {
 }
 
 .zoom-icon-note {
+  cursor: pointer;
   border: 2.5px solid black;
   width: 2.3em;
   height: 2.3em;
@@ -65,25 +65,37 @@ a {
   width: 40%;
 }
 
+.ThreeDots {
+  position: absolute;
+  top: 0.5em;
+  right: 0.4em;
+}
+
 @media (max-width: 600px) {
   .note ul {
     margin: 0em; /* To remove default bottom margin */
     padding: 0; /* To remove default left padding */
   }
   .zoom-icon {
-    top: 0;
+    bottom: -1em;
     right: 0;
     position: absolute;
-    cursor: pointer;
     width: 100%;
-    height: 100%;
+    height: 30vh;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    z-index: 0;
   }
 
   .zoom-icon-note {
     margin-bottom: 2.7em;
     margin-right: 1em;
+  }
+
+  .ThreeDots {
+    position: absolute;
+    top: -0.9em;
+    right: 0.3em;
   }
 }

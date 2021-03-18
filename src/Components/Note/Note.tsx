@@ -1,6 +1,8 @@
 import React, { Component, useState } from "react"
 import "./Note.css"
 import pin from "../../assets/icons/pin.svg"
+import { Link } from "react-router-dom"
+import ThreeDots from "../ThreeDots/ThreeDots"
 
 function NotesList(props: any) {
   const [notes, setNotes] = useState(props.notes)
@@ -12,32 +14,39 @@ function NotesList(props: any) {
   }
   function removeNote(arr) {
     console.log(arr)
-    let stringified = JSON.stringify(arr)
+    /*let stringified = JSON.stringify(arr)
     localStorage.setItem("note", stringified)
-    setNotes(arr)
+    setNotes([...arr])*/
   }
 
   let notesListed = notes
     .map(({ id, title, items }) => (
       <div
-        onClick={e => removeNote(handleRemove(notes, id))}
+        onClick={() => removeNote(handleRemove(notes, id))}
         key={id}
         className="note"
         title={"zoom the " + title + " list"}>
-        <h2 key={id}>{title}</h2>
-        <div className="list-container">
-          {console.log()}
-          <ul>
-            {items.map(item => {
-              return <li>- {item}</li>
-            })}
-          </ul>
+        <div className="ThreeDots">
+          <ThreeDots></ThreeDots>
         </div>
-        <div className="zoom-icon">
-          <div key={id} className="zoom-icon-note" title={"pin the " + title + " list"}>
-            <img src={pin} alt="zoom list" />
+        <Link to={"note/" + id}>
+          <h2 key={id}>{title}</h2>
+
+          <div className="list-container">
+            {console.log()}
+            <ul>
+              {items.map(item => {
+                return <li>- {item}</li>
+              })}
+            </ul>
           </div>
-        </div>
+
+          <div className="zoom-icon">
+            <div key={id} className="zoom-icon-note" title={"pin the " + title + " list"}>
+              <img src={pin} alt="zoom list" />
+            </div>
+          </div>
+        </Link>
       </div>
     ))
     .reverse()

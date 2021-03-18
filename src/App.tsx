@@ -8,6 +8,7 @@ import { Home } from "./assets/icons/Home"
 import { Plus } from "./assets/icons/Plus"
 import { User } from "./assets/icons/User"
 import SingleNote from "./Components/SingleNote/SingleNote"
+import ThreeDots from "./Components/ThreeDots/ThreeDots"
 
 function App() {
   if (navigator.onLine) {
@@ -52,10 +53,11 @@ function App() {
                   <Route path="/add">
                     <AddNote></AddNote>
                   </Route>
-                  <Route path="/user">user</Route>
-                  <Route path="/note">
-                    <SingleNote />
+                  <Route path="/user">
+                    user
+                    <ThreeDots></ThreeDots>
                   </Route>
+                  <Route path="/note/:id" component={SingleNote}></Route>
                 </div>
               </React.Fragment>
             </Switch>

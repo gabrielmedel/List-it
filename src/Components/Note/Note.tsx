@@ -4,6 +4,7 @@ import pin from "../../assets/icons/pin.svg"
 
 function NotesList(props: any) {
   const [notes, setNotes] = useState(props.notes)
+
   function handleRemove(arr, value) {
     return arr.filter(function ({ id }) {
       return id !== value
@@ -19,7 +20,7 @@ function NotesList(props: any) {
   let notesListed = notes
     .map(({ id, title, items }) => (
       <div
-        onClick={() => removeNote(handleRemove(props.notes, id))}
+        onClick={e => removeNote(handleRemove(notes, id))}
         key={id}
         className="note"
         title={"zoom the " + title + " list"}>

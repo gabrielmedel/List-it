@@ -1,0 +1,44 @@
+.modalContainer {
+  position: absolute;
+  background: #fffce6;
+  width: 20em;
+  min-height: 1em;
+  bottom: 3em;
+  right: 3em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 42px rgba(56, 56, 56, 0.055);
+}
+
+.modalWrapper {
+  padding: 1em 1.5em 0.5em 1.5em;
+}
+
+.modalWrapper .topContent {
+  display: flex;
+}
+
+.modalWrapper .topContent div:nth-child(1) {
+  flex: 1;
+}
+
+.modalWrapper p {
+  font-weight: 700;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .modalContainer {
+    width: 90vw;
+    min-height: 1em;
+    bottom: 8em;
+    right: 5.5vw;
+    border-radius: 10px;
+  }
+}

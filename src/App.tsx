@@ -8,7 +8,7 @@ import { Home } from "./assets/icons/Home"
 import { Plus } from "./assets/icons/Plus"
 import { User } from "./assets/icons/User"
 import SingleNote from "./Components/SingleNote/SingleNote"
-import ThreeDots from "./Components/ThreeDots/ThreeDots"
+import { SingleUser } from "./Components/User/SingleUser"
 
 function App() {
   if (navigator.onLine) {
@@ -54,8 +54,7 @@ function App() {
                     <AddNote></AddNote>
                   </Route>
                   <Route path="/user">
-                    user
-                    <ThreeDots></ThreeDots>
+                    <SingleUser></SingleUser>
                   </Route>
                   <Route path="/note/:id" component={SingleNote}></Route>
                 </div>

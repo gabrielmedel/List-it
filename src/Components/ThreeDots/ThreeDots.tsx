@@ -79,6 +79,7 @@ export default function ThreeDots(props) {
             position: "absolute",
             boxShadow: "0px 0px 42px rgba(0, 0, 0, 0.09)",
             backgroundColor: "#FFFCE6",
+            borderRadius: "13px",
           },
         }}>
         {options.map(option => (

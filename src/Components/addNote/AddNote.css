@@ -10,6 +10,7 @@
 .addNote {
   background: #fffac9;
   width: 75%;
+  min-height: 25em;
   border-radius: 15px;
   display: flex;
   flex-direction: column;

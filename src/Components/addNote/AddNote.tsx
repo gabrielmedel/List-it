@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { ModalTipUsable } from "../Modal/ModalTipUsable"
 import "./AddNote.css"
 
 function InputGenerator(props: any) {
@@ -71,6 +72,7 @@ export default class AddNote extends Component<any, any> {
   render() {
     return (
       <div className="addNoteContainer">
+        <ModalTipUsable></ModalTipUsable>
         <form className="addNote" onSubmit={this.submitHandler}>
           <input
             required
